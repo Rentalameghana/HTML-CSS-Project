@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technical Documentation Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      line-height: 1.6;
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #f5f5f5;
+      overflow-y: auto;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    #navbar header {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .nav-link {
+      display: block;
+      margin: 10px 0;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    #main-doc {
+      margin-left: 260px;
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .main-section {
+      margin-bottom: 40px;
+    }
+
+    .main-section header {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      #navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #main-doc {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <header>JS Documentation</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Variables">Variables</a>
+    <a class="nav-link" href="#Functions">Functions</a>
+    <a class="nav-link" href="#Loops">Loops</a>
+    <a class="nav-link" href="#Arrays">Arrays</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>JavaScript is a versatile language used in front-end and back-end development.</p>
+      <p>It runs in the browser and on servers with Node.js.</p>
+      <code>console.log('Hello World');</code>
+      <ul>
+        <li>Dynamic typing</li>
+        <li>First-class functions</li>
+        <li>Prototype-based</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <p>Variables store data values and are declared using var, let, or const.</p>
+      <p>Use let or const instead of var for better scope control.</p>
+      <code>let x = 5;</code>
+      <code>const y = 10;</code>
+      <ul>
+        <li>let is block-scoped</li>
+        <li>const is also block-scoped and immutable</li>
+        <li>var is function-scoped</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Functions">
+      <header>Functions</header>
+      <p>Functions are reusable blocks of code that perform a task.</p>
+      <p>They can be declared or assigned to variables.</p>
+      <code>function greet(name) { return 'Hello ' + name; }</code>
+      <code>const add = (a, b) => a + b;</code>
+      <ul>
+        <li>Function declarations are hoisted</li>
+        <li>Arrow functions are more concise</li>
+        <li>Functions can be passed as arguments</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Loops">
+      <header>Loops</header>
+      <p>Loops help you run the same code multiple times.</p>
+      <p>Common loop types are for, while, and do...while.</p>
+      <code>for (let i = 0; i < 5; i++) { console.log(i); }</code>
+      <ul>
+        <li>Use break to exit a loop early</li>
+        <li>Use continue to skip an iteration</li>
+        <li>Be careful with infinite loops</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Arrays">
+      <header>Arrays</header>
+      <p>Arrays hold a list of values in JavaScript.</p>
+      <p>They are zero-indexed and dynamic.</p>
+      <code>let fruits = ['apple', 'banana', 'cherry'];</code>
+      <ul>
+        <li>Access items using index: fruits[0]</li>
+        <li>Use push() to add items</li>
+        <li>Use pop() to remove items</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
